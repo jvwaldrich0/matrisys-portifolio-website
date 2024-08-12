@@ -22,7 +22,7 @@
   --background-color: rgba(0, 0, 0, 0.87); /* Background color for the entire website, including individual sections */
   --default-color: #000000; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #161616; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #00928a; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --accent-color: #798798; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #273940; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
@@ -722,6 +722,19 @@ section,
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
+#whatsapp-contact-about {
+  background-color: var(--background-color);
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+  padding: 8px 15px;
+}
+
+#whatsapp-contact-about:hover {
+  background-color: var(--accent-color);
+  color: var(--background-color);
+  border-color: var(--accent-color);
+}
+
 .about .btn-get-started {
   background-color: var(--accent-color);
   color: var(--contrast-color);
@@ -2379,4 +2392,10 @@ section,
   padding-left: 5px;
   color: color-mix(in srgb, var(--default-color), transparent 60%);
   font-size: 14px;
+}
+
+#button-tabs-contact {
+  width: 100%;
+  color: var(--accent-color);
+  border-color: var(--accent-color);
 }
