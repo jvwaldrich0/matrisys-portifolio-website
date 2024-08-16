@@ -217,7 +217,7 @@ h6 {
   .navmenu li:last-child a {
     padding-right: 0;
   }
-
+  
   .navmenu li:hover>a,
   .navmenu .active,
   .navmenu .active:focus {
@@ -279,10 +279,7 @@ h6 {
     left: -100%;
     visibility: visible;
   }
-  .navmenu a.active,
-  .navmenu a.active:focus {
-  color: var(--nav-hover-color); /* Cor para o link ativo */
-}
+  
 }
 
 /* Navmenu - Mobile */
@@ -702,7 +699,11 @@ section,
     scroll-margin-top: 66px;
   }
 }
-
+@media (max-width: 768px) {
+  .img-wrap {
+    margin-bottom: 20px; /* Adiciona um espaço entre a imagem e o texto */
+  }
+}
 /*--------------------------------------------------------------
 # Global Section Titles
 --------------------------------------------------------------*/
@@ -2240,6 +2241,8 @@ section,
   background-color: transparent;
   color: var(--accent-color);
 }
+
+
 
 /*--------------------------------------------------------------
 # Widgets
