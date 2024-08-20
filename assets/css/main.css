@@ -2298,6 +2298,12 @@ section,
   background: color-mix(in srgb, var(--accent-color) 90%, black 15%);
 }
 
+.contact .content {
+  background-color: var(--surface-color);
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
