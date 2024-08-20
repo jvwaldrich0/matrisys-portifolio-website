@@ -25,6 +25,8 @@
   --accent-color: #798798; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #273940; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  --whatsapp-color: #25d366;
+  --whatsapp-color-hover: #128c7e;
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
@@ -608,7 +610,7 @@ h6 {
   visibility: hidden;
   opacity: 0;
   right: 15px;
-  bottom: 15px;
+  bottom: 65px;
   z-index: 99999;
   background-color: var(--accent-color);
   width: 40px;
@@ -629,6 +631,71 @@ h6 {
 }
 
 .scroll-top.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.btn-contact-left {
+  border-top-left-radius: 4px !important;
+  border-top-right-radius: 0px !important;
+
+  border-bottom-left-radius: 4px !important;
+  border-bottom-right-radius: 0px !important;
+}
+
+.btn-contact-right {
+  border-top-left-radius: 0px !important;
+  border-top-right-radius: 4px !important;
+
+  border-bottom-left-radius: 0px !important;
+  border-bottom-right-radius: 4px !important;
+}
+
+.btn-whatsapp i {
+  color: #000000;
+}
+
+.btn-whatsapp a {
+  background-color: var(--whatsapp-color) !important;
+  border-color: var(--whatsapp-color);
+}
+
+.btn-whatsapp {
+  background-color: var(--whatsapp-color) !important;
+  border-color: var(--whatsapp-color);
+}
+
+.btn-whatsapp:hover {
+  background-color: var(--whatsapp-color-hover);
+  border-color: var(--whatsapp-color-hover);
+}
+
+.scroll-whatsapp {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 15px;
+  z-index: 99999;
+  background-color: var(--whatsapp-color);
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  transition: all 0.4s;
+}
+
+.scroll-whatsapp i {
+  font-size: 24px;
+  color: var(--contrast-color);
+  line-height: 0;
+}
+
+.scroll-whatsapp:hover {
+  background-color: color-mix(in srgb, var(--whatsapp-color-hover), transparent 20%);
+  color: var(--contrast-color);
+}
+
+.scroll-whatsapp.active {
   visibility: visible;
   opacity: 1;
 }
@@ -1707,6 +1774,11 @@ section,
   height: auto;
 }
 
+.navmenu a.active,
+.navmenu a.active:focus {
+  color: var(--nav-hover-color); /* Cor para o link ativo */
+}
+
 .team .slider-nav a {
   width: 40px;
   height: 40px;
@@ -2122,10 +2194,14 @@ section,
 # Contact Section
 --------------------------------------------------------------*/
 .contact .info {
-  background-color: var(--surface-color);
+  background-color: var(--nav-color);
   padding: 40px;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+}
+
+.contact h1,h2,h3,h4 {
+  color: var(--heading-color)
 }
 
 .contact .info h3 {

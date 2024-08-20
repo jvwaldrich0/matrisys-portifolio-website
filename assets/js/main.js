@@ -219,3 +219,23 @@
   });
 
 })();
+
+/* Navmenu change */
+document.addEventListener('DOMContentLoaded', function() {
+  const sections = document.querySelectorAll('.section');
+  const navLinks = document.querySelectorAll('#navmenu a');
+
+  function changeActiveLink() {
+      let index = sections.length;
+
+      while (--index && window.scrollY < sections[index].offsetTop) {}
+
+      navLinks.forEach((link) => link.classList.remove('active'));
+      if (navLinks[index]) {
+          navLinks[index].classList.add('active');
+      }
+  }
+
+  changeActiveLink();
+  window.addEventListener('scroll', changeActiveLink);
+});
