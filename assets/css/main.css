@@ -655,8 +655,13 @@ h6 {
   color: #000000;
 }
 
+.btn-whatsapp a {
+  background-color: var(--whatsapp-color) !important;
+  border-color: var(--whatsapp-color);
+}
+
 .btn-whatsapp {
-  background-color: var(--whatsapp-color);
+  background-color: var(--whatsapp-color) !important;
   border-color: var(--whatsapp-color);
 }
 
