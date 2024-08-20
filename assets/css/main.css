@@ -295,14 +295,14 @@ h6 {
   }
 
   .navmenu {
-    padding: 0;
+    padding: 5px 0;
     z-index: 9997;
   }
 
   .navmenu ul {
     display: none;
     position: absolute;
-    inset: 60px 20px 20px 20px;
+    inset: 40px 20px 20px 20px;
     padding: 10px 0;
     margin: 0;
     border-radius: 6px;
