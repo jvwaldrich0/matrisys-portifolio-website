@@ -2304,6 +2304,98 @@ section,
   padding-bottom: 50px;
 }
 
+/* Estilos gerais para o container */
+.contact .card-horizontal {
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row; /* Exibe os itens horizontalmente por padrão */
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.contact .card-horizontal .img-wrap {
+  flex: 0 0 auto;
+  width: 100%; /* Permite que a imagem ocupe o espaço necessário dentro do contêiner */
+  max-width: 150px; /* Tamanho máximo da imagem */
+  margin-bottom: 5%; /* Espaçamento inferior em dispositivos menores */
+  margin-right: 5%;
+  
+}
+
+.contact .card-horizontal .img-wrap img {
+  width: 100%; /* Ajusta a largura da imagem para o tamanho do contêiner */
+  height: auto; /* Mantém a proporção da imagem */
+  max-width: 150px; /* Garante que a imagem não ultrapasse 150px */
+  max-height: 150px; /* Limita a altura da imagem para manter a proporção */
+  object-fit: cover; /* Cobre o contêiner sem distorção */
+  border-radius: 50%; /* Faz a imagem ficar circular */
+}
+
+.contact .card-horizontal .card-body {
+  flex: 1;
+}
+
+.contact .card-horizontal .card-title {
+  color: var(--heading-color);
+  font-size: 22px;
+  margin-top: 10%;
+  margin-bottom: 0px;
+}
+
+.contact .card-horizontal .card-text {
+  font-size: 0.875rem;
+  color: var(--default-color); /* Cor de texto secundária */
+}
+
+.contact .card-horizontal .widget {
+  display: flex;
+  align-items: center;
+}
+
+.contact .card-horizontal .social-icons {
+  margin: 0;
+}
+
+.contact .card-horizontal .social-icons .social-icons {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 10px; /* Espaçamento entre ícones sociais */
+}
+
+.contact .card-horizontal .social-icons a {
+  color: color-mix(in srgb, var(--heading-color), transparent 0%);
+  font-size: 1.25rem;
+  transition: color 0.3s;
+}
+
+.contact .card-horizontal .social-icons a:hover {
+  background: var(--accent-color); 
+}
+
+.contact .content-subtitle {
+  font-size: 15px;
+  margin-bottom: 20px;
+  display: block;
+  color: var(--default-color);
+}
+
+@media (max-width: 767.98px) {
+  .card-horizontal {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-horizontal .img-wrap {
+    max-width: 120px; 
+    max-height: 120px;
+  }
+}
+
+
+
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
