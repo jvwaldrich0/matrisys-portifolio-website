@@ -259,4 +259,24 @@ document.addEventListener("DOMContentLoaded", function(){
       document.querySelector(id).scrollIntoView({block: 'start', behavior: 'smooth'});
    }
   }
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  const header = document.querySelector('.header');
+  let lastScrollTop = 0;
+
+  window.addEventListener('scroll', function () {
+    const currentScrollTop = window.scrollY || document.documentElement.scrollTop;
+
+    if (currentScrollTop > lastScrollTop) {
+      // Rolagem para baixo
+      header.classList.add('scrolled');
+    } else {
+      // Rolagem para cima
+      header.classList.remove('scrolled');
+    }
+
+    lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop;
   });
+});
+
