@@ -1,0 +1,63 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Tabs Section
+--------------------------------------------------------------*/
+.tabs {
+  .service-item {
+    .service-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      flex: 0 0 40px;
+      border-radius: 4px;
+      position: relative;
+      color: var(--accent-color);
+      background-color: color-mix(in srgb, var(--default-color), transparent 95%);
+      margin-right: 20px;
+      font-size: 16px;
+    }
+
+    .service-contents {
+      h3 {
+        font-size: 16px;
+        color: var(--heading-color);
+      }
+    }
+
+    &.link {
+      padding: 20px;
+      margin-bottom: 10px;
+      border-radius: 7px;
+
+      .service-contents {
+        color: var(--default-color);
+
+        *:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      &:hover {
+        background: color-mix(in srgb, var(--default-color), transparent 96%);
+
+        .service-icon {
+          background-color: color-mix(in srgb,
+              var(--default-color),
+              transparent 90%);
+          color: var(--default-color);
+        }
+      }
+
+      &.active {
+        background: var(--surface-color);
+
+        .service-icon {
+          background-color: var(--accent-color);
+          color: var(--contrast-color);
+        }
+      }
+    }
+  }
+}
